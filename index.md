@@ -2,8 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello</title>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+		<link rel="stylesheet" href="github-activity-0.1.5.min.css">
 
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+		<script type="text/javascript" src="github-activity-0.1.5.min.js"></script>
 </head>
 <body>
 	<h1>test</h1>
