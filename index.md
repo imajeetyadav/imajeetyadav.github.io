@@ -10,13 +10,10 @@
         <div>
             {{ "My GitHub" | markdownify }}
         </div>
-        <p>
-           ###GitHub Calendar
-         </p>
+        #GitHub Calendar
         <div id="github-graph" class="github-graph"></div><!--//github-graph-->
-        <p>
-            ##    GitHub Activity Stream 
-        </p>                 
+    
+        #GitHub Activity Stream                
         <div id="ghfeed" class="ghfeed"></div><!--//ghfeed-->
         <!-- github calendar plugin -->
         
