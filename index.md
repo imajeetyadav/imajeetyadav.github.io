@@ -1,16 +1,15 @@
 
-<h2>Example of code</h2>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
 
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <h2>Your title</h2>
-            <div class="wrap">
-            //Your content
-            </div>
-        </div>
-    </div>
-</pre>
+</head>
+<body>
+	<h1>test</h1>
+
+</body>
+</html>
 
 ## Welcome to GitHub Pages
 
