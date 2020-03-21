@@ -1,6 +1,9 @@
 # My Github Activity
 <html>
     <head>
+	    <meta charset="utf-8">
+    	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <!-- github calendar css -->
         <link rel="stylesheet" href="plugins/github-calendar/dist/github-calendar.css">
         <!-- github activity css -->    
