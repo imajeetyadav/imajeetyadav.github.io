@@ -37,7 +37,7 @@
 
 .text-small {
     font-size: 12px;
-    color: #767676;
+    color: #0feb75;
 }
 
 .calendar-graph {
@@ -70,7 +70,7 @@
     line-height: 1.3em;
     font-size: 24px;
     display: block;
-    color: #333;
+    color: rgb(33, 211, 107);
 }
 
 .calendar img.spinner {
