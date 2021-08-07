@@ -1,11 +1,11 @@
 {
-    "name": "portfolio",
-    "short_name": "portfolio",
+    "name": "Ajeet Yadav",
+    "short_name": "ajeetak47",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Ajeet Yadav - AjeetAk47 portfolio",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
