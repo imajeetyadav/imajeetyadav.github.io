@@ -1,11 +1,11 @@
 {
-    "name": "github_portfolio",
-    "short_name": "github_portfolio",
+    "name": "Ajeet Yadav",
+    "short_name": "Ajeet Yadav",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "My Github Portfolio",
+    "description": "My Portfolio",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
