@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -11,29 +10,34 @@
 
     For more details:
     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
   -->
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Ajeet Yadav - ajeetAk47 Portfolio">
+  <meta name="description" content="Ajeet Yadav">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio">
+  <meta name="apple-mobile-web-app-title" content="Ajeet Yadav">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <title>portfolio</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Ajeet Yadav</title>
   <link rel="manifest" href="manifest.json">
 </head>
-
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '2409865199';
+    var serviceWorkerVersion = '2338622792';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -66,7 +70,7 @@
             if (!reg.active && (reg.installing || reg.waiting)) {
               // No active web worker and we have installed or are installing
               // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing ?? reg.waiting);
+              waitForActivation(reg.installing || reg.waiting);
             } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
               // When the app updates the serviceWorkerVersion changes, so we
               // need to ask the service worker to update.
@@ -97,5 +101,4 @@
     }
   </script>
 </body>
-
 </html>
