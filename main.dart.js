@@ -16735,12 +16735,12 @@ _.d=d
 _.e=e},
 B3:function B3(a){this.a=a},
 yI:function yI(a){this.a=a},
-a8y(){return new A.Av(A.a([new A.kM("Nov 2020","Present","TCS","Data Engineer","Developed ETL pipelines from client system to HBase via Sterling/EIG and Optimized Spark Job performance using DDEP Framework (Data Driven Experience Platform)."),new A.kM("Jan 2020","May 2020","Capgemini","Java Developer (Internship)","1. Develop the service layer that acts a bridge between the presentation layer and data access layer using the Spring framework.\n2. Implementing the Design Pattern like MVC to improve the performance.")],t.ma),null)},
+a8y(){return new A.Av(A.a([new A.kM("Nov 2020","Present","Tata Consultancy Services","Data Engineer",""),new A.kM("Jan 2020","May 2020","Capgemini","Software Engineer Intern","")],t.ma),null)},
 Av:function Av(a,b){this.c=a
 this.a=b},
 OR:function OR(){},
 E4:function E4(a){this.a=a},
-a9Z(){return new A.E5(A.a(["Python","Java","Azure","Big Data","Spark","Kafka","Spring Framework","Maven","Dart","Flutter","Firebase","Docker","Git","Kubernetes"],t.s),null)},
+a9Z(){return new A.E5(A.a(["Python","Java","Azure","Big Data","Spark","Kafka","Spring Framework","Maven","Dart","Flutter","Firebase","Docker","Git","Jenkins","Control-M"],t.s),null)},
 E5:function E5(a,b){this.c=a
 this.a=b},
 Xo:function Xo(a){this.a=a},
