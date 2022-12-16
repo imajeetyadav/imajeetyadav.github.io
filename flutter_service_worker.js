@@ -3,31 +3,32 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
-"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
-"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
-"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
-"index.html": "1d60fa72f3404fd384b10abfd52f4f54",
-"/": "1d60fa72f3404fd384b10abfd52f4f54",
-"favicon.png": "c805d227726630a5741a14fa7697d072",
-"main.dart.js": "54a3c2fcd6acf562076414b795ee8166",
+  "main.dart.js": "4ca4c1fc7687083e8769fbdc1187e434",
+"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62",
+"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
+"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
+"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
 "manifest.json": "7f8a547ec1cfbc618be3b4a8eddb1536",
-"version.json": "58229f82b089f18fe9cc5cc2a4052fd7",
-"flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
 "icons/Icon-maskable-512.png": "ac10eeae44c4f541c7a00a3824bc8592",
-"icons/Icon-512.png": "ac10eeae44c4f541c7a00a3824bc8592",
 "icons/Icon-maskable-192.png": "ac10eeae44c4f541c7a00a3824bc8592",
+"icons/Icon-512.png": "ac10eeae44c4f541c7a00a3824bc8592",
 "icons/Icon-192.png": "ac10eeae44c4f541c7a00a3824bc8592",
-"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/NOTICES": "e2de7282066d4ccef1cd9c9d5cb8e5bf",
-"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
-"assets/assets/images/azure-data-engineer-associate-600x600.png": "3d950dc2497363f3e7731fce24e6947d",
-"assets/assets/images/azure-fundamentals-600x600.png": "107d26caf45b59b4ea60445c0a589208",
-"assets/assets/images/image_dev.png": "a58b49b44bef718643710761ea0a3625",
-"assets/assets/icons/linkedin.png": "f98bad210ccfa5926027280dfe08ace5",
-"assets/assets/icons/github.png": "eb94bb97c3410733ce017b184d314723",
+"flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
+"assets/AssetManifest.json": "d9ab0462c2756fdb273637d9d6573972",
+"assets/shaders/ink_sparkle.frag": "bfd223fd128d659ff8813253d56be66f",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/AssetManifest.json": "d9ab0462c2756fdb273637d9d6573972"
+"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
+"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
+"assets/assets/images/azure-fundamentals-600x600.png": "107d26caf45b59b4ea60445c0a589208",
+"assets/assets/images/azure-data-engineer-associate-600x600.png": "3d950dc2497363f3e7731fce24e6947d",
+"assets/assets/images/image_dev.png": "a58b49b44bef718643710761ea0a3625",
+"assets/assets/icons/github.png": "eb94bb97c3410733ce017b184d314723",
+"assets/assets/icons/linkedin.png": "f98bad210ccfa5926027280dfe08ace5",
+"assets/NOTICES": "794a4d14719bc2be305eb9d7b6b24f14",
+"index.html": "3c437241680bea2033168efb03e7839c",
+"/": "3c437241680bea2033168efb03e7839c",
+"favicon.png": "c805d227726630a5741a14fa7697d072",
+"version.json": "58229f82b089f18fe9cc5cc2a4052fd7"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -35,7 +36,6 @@ const RESOURCES = {
 const CORE = [
   "main.dart.js",
 "index.html",
-"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
@@ -134,9 +134,11 @@ self.addEventListener("fetch", (event) => {
     .then((cache) =>  {
       return cache.match(event.request).then((response) => {
         // Either respond with the cached resource, or perform a fetch and
-        // lazily populate the cache.
+        // lazily populate the cache only if the resource was successfully fetched.
         return response || fetch(event.request).then((response) => {
-          cache.put(event.request, response.clone());
+          if (response && Boolean(response.ok)) {
+            cache.put(event.request, response.clone());
+          }
           return response;
         });
       })
