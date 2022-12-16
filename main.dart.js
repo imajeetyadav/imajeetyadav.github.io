@@ -17434,7 +17434,7 @@ Af:function Af(a,b){this.c=a
 this.a=b},
 Qc:function Qc(){},
 E2:function E2(a){this.a=a},
-abf(){return new A.E3(A.a(["Python","Java","Azure","Spark","Kafka","Spring Framework","Maven","Dart","Flutter","Firebase","Docker","Git","Jenkins","GitOps","ArgoCD"],t.s),null)},
+abf(){return new A.E3(A.a(["Python","Java","Azure","AWS","Firebase","Docker","Git","Github Action","Gitlab CI","Terraform","Jenkins","ArgoCD","Kafka","Flutter"],t.s),null)},
 E3:function E3(a,b){this.c=a
 this.a=b},
 Zh:function Zh(a){this.a=a},
